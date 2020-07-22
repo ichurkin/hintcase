@@ -5,7 +5,11 @@
       <module fileurl="file://$PROJECT_DIR$/HintCase/HintCase.iml" filepath="$PROJECT_DIR$/HintCase/HintCase.iml" />
       <module fileurl="file://$PROJECT_DIR$/HintCaseAssets/HintCaseAssets.iml" filepath="$PROJECT_DIR$/HintCaseAssets/HintCaseAssets.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/github-hintcase.iml" filepath="$PROJECT_DIR$/.idea/modules/github-hintcase.iml" group="hintcase" />
       <module fileurl="file://$PROJECT_DIR$/hintcase.iml" filepath="$PROJECT_DIR$/hintcase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HintCase/hintcase-HintCase.iml" filepath="$PROJECT_DIR$/.idea/modules/HintCase/hintcase-HintCase.iml" group="hintcase/HintCase" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/HintCaseAssets/hintcase-HintCaseAssets.iml" filepath="$PROJECT_DIR$/.idea/modules/HintCaseAssets/hintcase-HintCaseAssets.iml" group="hintcase/HintCaseAssets" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/hintcase-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/hintcase-app.iml" group="hintcase/app" />
     </modules>
   </component>
 </project>

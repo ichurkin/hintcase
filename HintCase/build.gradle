@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'
+//apply plugin: 'com.novoda.bintray-release'
 
 def globalConfiguration = rootProject.extensions.getByName("ext")
 
@@ -10,8 +10,8 @@ android {
     defaultConfig {
         minSdkVersion globalConfiguration.getAt("androidMinSdkVersion")
         targetSdkVersion globalConfiguration.getAt("androidTargetSdkVersion")
-        versionCode globalConfiguration.getAt("androidVersionCodeMainLibrary")
-        versionName globalConfiguration.getAt("androidVersionNameMainLibrary")
+        versionCode 6// globalConfiguration.getAt("androidVersionCodeMainLibrary")
+        versionName '1.0.5' //'globalConfiguration.getAt("androidVersionNameMainLibrary")
     }
     buildTypes {
         release {
@@ -21,21 +21,22 @@ android {
 }
 
 dependencies {
-    def libraryDependencies = globalConfiguration.mainLibraryDependencies
-    compile libraryDependencies.AndroidAnnotations
+//    def libraryDependencies = globalConfiguration.mainLibraryDependencies
+//    implementation libraryDependencies.AndroidAnnotations
+    implementation "androidx.annotation:annotation:1.1.0"
 }
 
-publish {
-    Properties properties = new Properties()
-    properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
-    userOrg = globalConfiguration.getAt("jcenterUserOrganization")
-    groupId = globalConfiguration.getAt("jcenterGroupId")
-    artifactId = globalConfiguration.getAt("jcenterArtifactIdMainLibrary")
-    publishVersion = globalConfiguration.getAt("androidVersionNameMainLibrary")
-    desc = globalConfiguration.getAt("jcenterDescriptionMainLibrary")
-    website = globalConfiguration.getAt("jcenterWebsite")
-    repository = globalConfiguration.getAt("jcenterRepository")
-    bintrayUser = properties.getProperty("bintrayUser")
-    bintrayKey = properties.getProperty("bintrayKey")
-}
+//publish {
+//    Properties properties = new Properties()
+//    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+//
+//    userOrg = globalConfiguration.getAt("jcenterUserOrganization")
+//    groupId = globalConfiguration.getAt("jcenterGroupId")
+//    artifactId = globalConfiguration.getAt("jcenterArtifactIdMainLibrary")
+//    publishVersion = globalConfiguration.getAt("androidVersionNameMainLibrary")
+//    desc = globalConfiguration.getAt("jcenterDescriptionMainLibrary")
+//    website = globalConfiguration.getAt("jcenterWebsite")
+//    repository = globalConfiguration.getAt("jcenterRepository")
+//    bintrayUser = properties.getProperty("bintrayUser")
+//    bintrayKey = properties.getProperty("bintrayKey")
+//}

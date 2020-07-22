@@ -31,16 +31,16 @@ allprojects {
 ext {
     //Android
     androidApplicationId = "com.joanfuentes"
-    androidBuildToolsVersion = "24.0.2"
+    androidBuildToolsVersion = "29.0.2"
     androidMinSdkVersion = 14
-    androidTargetSdkVersion = 24
-    androidCompileSdkVersion = 24
-    androidVersionCodeExample = 5
-    androidVersionNameExample = "1.0.4"
-    androidVersionCodeMainLibrary = 5
-    androidVersionNameMainLibrary = "1.0.4"
-    androidVersionCodeAssetsLibrary = 5
-    androidVersionNameAssetsLibrary = "1.0.4"
+    androidTargetSdkVersion = 29
+    androidCompileSdkVersion = 29
+    androidVersionCodeExample = 6
+    androidVersionNameExample = "1.0.5"
+    androidVersionCodeMainLibrary = 6
+    androidVersionNameMainLibrary = "1.0.5"
+    androidVersionCodeAssetsLibrary = 6
+    androidVersionNameAssetsLibrary = "1.0.5"
 
     //Libraries Versions
     androidSupportVersion = "24.2.1"
@@ -66,10 +66,12 @@ ext {
     ]
 
     mainLibraryDependencies = [
-            AndroidAnnotations: "com.android.support:support-annotations:${androidSupportVersion}",
+            //AndroidAnnotations: "com.android.support:support-annotations:${androidSupportVersion}",
+            AndroidAnnotations: "androidx.annotation:annotation:1.1.0",
     ]
 
     assetsLibraryDependencies = [
-            AppCompat: "com.android.support:appcompat-v7:${androidSupportVersion}",
+            //AppCompat: "com.android.support:appcompat-v7:${androidSupportVersion}",
+            AppCompat: "androidx.appcompat:appcompat:1.2.0-rc01",
     ]
 }

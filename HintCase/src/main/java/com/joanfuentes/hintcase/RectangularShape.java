@@ -34,14 +34,14 @@ public class RectangularShape extends Shape {
     @Override
     public void setShapeInfo(View targetView, ViewGroup parent, int offset, Context context) {
         if (targetView != null) {
-            minHeight = targetView.getMeasuredHeight() + (offset * 2);
-            minWidth = targetView.getMeasuredWidth() + (offset * 2);
+            minHeight = targetView.getScaleY() * targetView.getMeasuredHeight() + (offset * 2);
+            minWidth = targetView.getScaleX() * targetView.getMeasuredWidth() + (offset * 2);
             maxHeight = parent.getHeight() * 2;
             maxWidth = parent.getWidth() * 2;
             int[] targetViewLocationInWindow = new int[2];
             targetView.getLocationInWindow(targetViewLocationInWindow);
-            setCenterX(targetViewLocationInWindow[0] + targetView.getWidth() / 2);
-            setCenterY(targetViewLocationInWindow[1] + targetView.getHeight() / 2);
+            setCenterX(targetViewLocationInWindow[0] + targetView.getScaleX() * targetView.getWidth() / 2);
+            setCenterY(targetViewLocationInWindow[1] + targetView.getScaleY() * targetView.getHeight() / 2);
             setLeft(targetViewLocationInWindow[0] - offset);
             setRight(targetViewLocationInWindow[0] + (int)minWidth - offset);
             setTop(targetViewLocationInWindow[1] - offset);

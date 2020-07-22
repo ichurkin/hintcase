@@ -3,17 +3,18 @@ package com.joanfuentes.hintcaseexample;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
-import android.widget.Switch;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SwitchCompat;
+import androidx.appcompat.widget.Toolbar;
+
+import com.google.android.material.snackbar.Snackbar;
 import com.joanfuentes.hintcase.HintCase;
 import com.joanfuentes.hintcaseassets.contentholderanimators.FadeInContentHolderAnimator;
 import com.joanfuentes.hintcaseassets.hintcontentholders.SimpleHintContentHolder;
@@ -97,7 +98,7 @@ public class TargetHintActivity extends AppCompatActivity {
 
     private void setViews() {
         Button buttonExample1 = (Button) findViewById(R.id.button_example_1);
-        if(buttonExample1 != null) {
+        if (buttonExample1 != null) {
             buttonExample1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -108,7 +109,7 @@ public class TargetHintActivity extends AppCompatActivity {
                             .setContentStyle(R.style.content)
                             .build();
                     new HintCase(view.getRootView())
-                            .setTarget(findViewById(R.id.button),HintCase.TARGET_IS_NOT_CLICKABLE)
+                            .setTarget(findViewById(R.id.button), HintCase.TARGET_IS_NOT_CLICKABLE)
                             .setBackgroundColorByResourceId(R.color.colorPrimary)
                             .setShapeAnimators(new RevealRectangularShapeAnimator(), new UnrevealRectangularShapeAnimator())
                             .setHintBlock(blockInfo, new FadeInContentHolderAnimator())
@@ -118,7 +119,7 @@ public class TargetHintActivity extends AppCompatActivity {
         }
 
         Button buttonExample2 = (Button) findViewById(R.id.button_example_2);
-        if(buttonExample2 != null) {
+        if (buttonExample2 != null) {
             buttonExample2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -138,7 +139,7 @@ public class TargetHintActivity extends AppCompatActivity {
             });
         }
 
-        Switch switchButton = (Switch) findViewById(R.id.switch_button);
+        SwitchCompat switchButton = (SwitchCompat) findViewById(R.id.switch_button);
         if (switchButton != null) {
             switchButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
@@ -149,7 +150,7 @@ public class TargetHintActivity extends AppCompatActivity {
         }
 
         Button buttonExample3 = (Button) findViewById(R.id.button_example_3);
-        if(buttonExample3 != null) {
+        if (buttonExample3 != null) {
             buttonExample3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -176,7 +177,7 @@ public class TargetHintActivity extends AppCompatActivity {
         }
 
         Button buttonExample4 = (Button) findViewById(R.id.button_example_4);
-        if(buttonExample4 != null) {
+        if (buttonExample4 != null) {
             buttonExample4.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -202,7 +203,7 @@ public class TargetHintActivity extends AppCompatActivity {
         }
 
         Button buttonExample5 = (Button) findViewById(R.id.button_example_5);
-        if(buttonExample5 != null) {
+        if (buttonExample5 != null) {
             buttonExample5.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -223,7 +224,7 @@ public class TargetHintActivity extends AppCompatActivity {
         }
 
         Button buttonExample6 = (Button) findViewById(R.id.button_example_6);
-        if(buttonExample6 != null) {
+        if (buttonExample6 != null) {
             buttonExample6.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

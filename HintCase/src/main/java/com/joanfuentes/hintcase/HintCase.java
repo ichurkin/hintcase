@@ -2,7 +2,7 @@ package com.joanfuentes.hintcase;
 
 import android.app.Activity;
 import android.content.Context;
-import android.support.annotation.DimenRes;
+import androidx.annotation.DimenRes;
 import android.view.View;
 
 import com.joanfuentes.hintcase.utils.DimenUtils;

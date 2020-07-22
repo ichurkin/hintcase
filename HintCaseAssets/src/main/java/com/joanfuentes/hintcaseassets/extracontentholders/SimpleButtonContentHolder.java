@@ -1,8 +1,8 @@
 package com.joanfuentes.hintcaseassets.extracontentholders;
 
 import android.content.Context;
-import android.support.v7.view.ContextThemeWrapper;
-import android.support.v7.widget.AppCompatButton;
+import androidx.appcompat.view.ContextThemeWrapper;
+import androidx.appcompat.widget.AppCompatButton;
 import android.view.View;
 import android.view.ViewGroup;
 

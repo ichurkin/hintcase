@@ -23,11 +23,11 @@ android {
 
 dependencies {
     def dependencies = globalConfiguration.exampleDependencies
-    compile project(':HintCase')
-    compile project(':HintCaseAssets')
-    compile dependencies.AppCompat
-    compile dependencies.DesignLibrary
-    compile dependencies.SupportLibrary
-    compile dependencies.GlideLibrary
-    compile dependencies.ButterKnife
+    implementation project(':HintCase')
+    implementation project(':HintCaseAssets')
+    implementation dependencies.AppCompat
+    implementation dependencies.DesignLibrary
+    implementation dependencies.SupportLibrary
+    implementation dependencies.GlideLibrary
+    implementation dependencies.ButterKnife
 }

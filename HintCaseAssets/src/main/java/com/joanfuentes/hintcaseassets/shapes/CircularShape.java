@@ -40,12 +40,12 @@ public class CircularShape extends Shape {
     @Override
     public void setShapeInfo(View targetView, ViewGroup parent, int offset, Context context) {
         if (targetView != null) {
-            minRadius = (Math.max(targetView.getMeasuredWidth(),targetView.getMeasuredHeight()) / 2) + offset;
+            minRadius = (Math.max(targetView.getScaleX() * targetView.getMeasuredWidth(), targetView.getScaleY() * targetView.getMeasuredHeight()) / 2) + offset;
             maxRadius = Math.max(parent.getHeight(), parent.getWidth());
             int[] targetViewLocationInWindow = new int[2];
             targetView.getLocationInWindow(targetViewLocationInWindow);
-            setCenterX(targetViewLocationInWindow[0] + targetView.getWidth() / 2);
-            setCenterY(targetViewLocationInWindow[1] + targetView.getHeight() / 2);
+            setCenterX(targetViewLocationInWindow[0] + targetView.getScaleX() * targetView.getWidth() / 2);
+            setCenterY(targetViewLocationInWindow[1] + targetView.getScaleY() * targetView.getHeight() / 2);
             setLeft((int) (getCenterX() - minRadius));
             setRight((int) (getCenterX() + minRadius));
             setTop((int) (getCenterY()  - minRadius));
